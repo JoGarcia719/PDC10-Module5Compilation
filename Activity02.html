@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+<body>
+    <script>
+    
+    // First part create a function
+      function vehicle()
+      {
+
+    // Second part create a function to display
+
+      this.vehicletype="vehicletype";  
+      }
+      vehicle.prototype.display = function()
+    {
+        return "The brand is: "+ this.vehicletype;
+    }
+ // Third part Class Constructor
+    function MyCar(vehicletype)
+    {
+        this.vehicletype = vehicletype;
+    
+    }
+// Fourth part create an object 
+
+    MyCar.prototype=Object.create(vehicle.prototype);
+    var myCar = new MyCar("Ford");
+
+    alert(myCar.display());
+    
+    </script>
+</body>
+</html>
